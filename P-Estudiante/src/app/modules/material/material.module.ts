@@ -43,8 +43,8 @@ import { MatRippleModule } from '@angular/material/core';
 import { LayoutModule } from '@angular/cdk/layout';
 
 
+
 @NgModule({
-  declarations: [],
   imports: [
     CommonModule,
     MatSliderModule,
