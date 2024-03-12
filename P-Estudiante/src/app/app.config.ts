@@ -1,26 +1,39 @@
-import { ApplicationConfig, importProvidersFrom } from '@angular/core';
-import { provideRouter, Routes } from '@angular/router';
-import { HttpClientModule, HttpClient } from '@angular/common/http';
-import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
-import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import {ApplicationConfig, importProvidersFrom, NgModule} from '@angular/core';
+import { provideRouter } from '@angular/router';
 
-export function HttpLoaderFactory(http: HttpClient) {
-    return new TranslateHttpLoader(http, './assets/i18n/', '.json');
+import { routes } from './app.routes';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+
+// importaciones propieas
+import {HttpClientModule, HttpClient} from '@angular/common/http';
+import {TranslateModule, TranslateLoader, TranslateService} from '@ngx-translate/core';
+import {TranslateHttpLoader} from '@ngx-translate/http-loader';
+import {CommonModule} from "@angular/common";
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import {NgxSpinnerModule} from "ngx-spinner";
+
+
+export function createTranslateLoader(http: HttpClient): unknown {
+  return new TranslateHttpLoader(http, 'assets/i18n/', '.json');
 }
-
-const routes: Routes = [
-];
-
 export const appConfig: ApplicationConfig = {
-  providers: [
-    provideRouter(routes),
-    importProvidersFrom( HttpClientModule, TranslateModule.forRoot({
-      defaultLanguage: 'es', loader: {
-        provide: TranslateLoader,
-        useFactory: HttpLoaderFactory, deps: [HttpClient] 
-                }
-            })
-        )
-    ]
+  providers: [provideRouter(routes), provideAnimationsAsync(),
+  TranslateService,
+    importProvidersFrom(
+      CommonModule,
+      HttpClientModule,
+      BrowserAnimationsModule,
+      NgxSpinnerModule,
+      TranslateModule.forRoot({
+        defaultLanguage:'es',
+        loader:{
+          provide: TranslateLoader,
+          useFactory:createTranslateLoader,
+          deps:[HttpClient]
+        }
+      })
+    )
+  ],
 };
+
 

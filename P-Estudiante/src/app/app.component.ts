@@ -1,26 +1,49 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { MaterialModule } from './modules/material/material.module'; 
-import { TranslateModule, TranslateService } from '@ngx-translate/core'; 
+import { RouterOutlet } from '@angular/router';
+import {MaterialModule} from "./modules/material/material.module";
+import {TranslateModule, TranslateService} from "@ngx-translate/core";
+import {NgxSpinnerModule} from "ngx-spinner";
+import { HelperService } from './services/helper.service';
+import Swal from 'sweetalert2';
+import { ApiService } from './services/api.service';
+import { apiRouters } from './core/config/apiRouters';
+
+//otro proyecto
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, CommonModule, MaterialModule, TranslateModule ],
+  imports: [CommonModule, RouterOutlet, MaterialModule, TranslateModule, NgxSpinnerModule,
+  ],
+  providers :[TranslateService],
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
+  styleUrl: './app.component.scss'
 })
 export class AppComponent {
+  
+  constructor(private translateService: TranslateService,
+    // public helperService: HelperService,
+              ) {
+      this.initApp()
+    }
 
-  constructor(public translateService: TranslateService, ){
-    this.initApp()
-  }
-
-  initApp(): void{
-    const lang: any = localStorage.getItem('lang') ? localStorage.getItem('lang'): 'en';
-    this.translateService.setDefaultLang(lang);
-    this.translateService.use(lang);
-  }
- 
+initApp():void{
+      const lang: any = localStorage.getItem('lang') ? localStorage.getItem('lang') : 'es';
+      this.translateService.setDefaultLang(lang);
+      this.translateService.use(lang);
+      // this.helperService.alert(this.translateService.instant('CLOSE'), "CLOSE", "success")    
 }
+
+} //FINAL
+
+
+
+ // public helperService: HelperService
+
+ // this.helperService.spinnerShow();
+
+//   this.spinner.show();
+  //   setTimeout(() => {
+  //     this.spinner.hide();
+  //   }, 5000);
