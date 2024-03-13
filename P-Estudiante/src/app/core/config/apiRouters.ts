@@ -1,6 +1,4 @@
 const API = 'api';
 export const apiRouters = {
-    CREATE_USTUDENTS: `/${API}/students`  
+    POST_GET: `/posts`  
 };
-
-//otro ese no es 

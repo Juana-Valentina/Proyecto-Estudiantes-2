@@ -25,14 +25,14 @@ export const appConfig: ApplicationConfig = {
       BrowserAnimationsModule,
       NgxSpinnerModule,
       TranslateModule.forRoot({
-        defaultLanguage:'es',
+        defaultLanguage:'en',
         loader:{
           provide: TranslateLoader,
           useFactory:createTranslateLoader,
           deps:[HttpClient]
         }
       })
-    )
+    ), provideAnimationsAsync(), provideAnimationsAsync(), provideAnimationsAsync(), provideAnimationsAsync(), provideAnimationsAsync(), provideAnimationsAsync(), provideAnimationsAsync(), provideAnimationsAsync()
   ],
 };
 

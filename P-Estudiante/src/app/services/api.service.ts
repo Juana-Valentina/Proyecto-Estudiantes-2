@@ -12,10 +12,10 @@ export class ApiService {
   constructor(public http: HttpClient
 
   ) { 
-    this.urlBase = environment.DOMINE;
+    this.urlBase = environment.DOMAIN;
   }
 
-  getPromise(rute: string): Promise<any> {
+  getPr(rute: string): Promise<any> {
     return new Promise((resolve, reject) => {
       const headers = new HttpHeaders({
         authorization: '',
@@ -32,11 +32,11 @@ export class ApiService {
     });
   }
   
-  getObservable(rute: string): Observable <any> {
+  getOb(rute: string): Observable <any> {
     return this.http.get(this.urlBase + rute);
   } 
   
-  postPromise(rute: string, data: any): Promise<any> {
+  postPr(rute: string, data: any): Promise<any> {
     return new Promise((resolve, reject) => {
       this.http.post(this.urlBase + rute, data).subscribe({
         next: (resp) => { resolve(resp);
@@ -46,11 +46,11 @@ export class ApiService {
     });
   }
   
-  postObservable(rute: string, data: any): Observable <any> {
+  postOb(rute: string, data: any): Observable <any> {
     return this.http.post(this.urlBase + rute, data);
   }
 
-  putPromise(rute: string, data: any): Promise<any> {
+  putPr(rute: string, data: any): Promise<any> {
     return new Promise((resolve, reject) => {
       this.http.put(this.urlBase + rute, data).subscribe({
         next: (resp) => {
@@ -63,13 +63,12 @@ export class ApiService {
     });
   }
   
-//proyecto estudiantes
 
-  putObservable(rute: string, data: any): Observable <any> {
+  putOb(rute: string, data: any): Observable <any> {
     return this.http.put(this.urlBase + rute, data);
   } 
 
-  deletePromise(rute: string): Promise<any> {
+  deletePr(rute: string): Promise<any> {
     return new Promise((resolve, reject) => {
       this.http.delete(this.urlBase + rute).subscribe({
         next: (resp) => {
@@ -82,7 +81,7 @@ export class ApiService {
     });
   }
   
-  deleteObservable(rute: string): Observable <any> {
+  deleteOb(rute: string): Observable <any> {
     return this.http.delete(this.urlBase + rute);
   }
 } 

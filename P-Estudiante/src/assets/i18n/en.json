@@ -1,4 +1,6 @@
 {
     "APP_NAME": "students",
-    "CLOSE": "Close"
+    "CLOSE": "Close",
+    "POST_LIST": "Post List",
+    "THERE_ARE_NO_DATA": "There are no Data"
 }
