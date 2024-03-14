@@ -11,7 +11,13 @@ import { ListCommentsComponent } from './list-comments/list-comments.component';
   ],
   imports: [
     CommonModule,
-    CommentRoutingModule
+    CommentRoutingModule,
+    ListCommentsComponent,
+  ],
+
+  exports:[
+    ListCommentsComponent,
   ]
+
 })
 export class CommentModule { }

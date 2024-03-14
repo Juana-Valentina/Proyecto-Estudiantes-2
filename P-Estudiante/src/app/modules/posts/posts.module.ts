@@ -7,6 +7,7 @@ import { MaterialModule } from '../material/material.module';
 import { ListPostsComponent } from './components/list-posts/list-posts.component';
 import { DetailPostComponent } from './components/detail-post/detail-post.component';
 import { TranslateModule } from '@ngx-translate/core';
+import { CommentModule } from '../comments/comment/comment.module';
 
 
 
@@ -17,7 +18,8 @@ import { TranslateModule } from '@ngx-translate/core';
     PostsRoutingModule,
     NgxSpinnerModule,
     MaterialModule,
-    TranslateModule
+    TranslateModule,
+    CommentModule
   ],
 
   exports:[

@@ -6,31 +6,37 @@ import { apiRouters } from '../../../../core/config/apiRouters';
 import { CommonModule } from '@angular/common';
 import { HelperService } from '../../../../services/helper.service';
 import { MaterialModule } from '../../../material/material.module';
+import { CommentModule } from '../../../comments/comment/comment.module';
 
 @Component({
   selector: 'app-detail-post',
   standalone: true,
-  imports: [CommonModule, MaterialModule],
+  imports: [CommonModule, MaterialModule, CommentModule],
   templateUrl: './detail-post.component.html',
   styleUrl: './detail-post.component.scss'
 })
 export class DetailPostComponent {
 
   // comments : Array<any> = []
-  public comments: Array<any>=[]
+    idPost: any;
   post = {} as any;
 
   constructor(public activatedRoute: ActivatedRoute,
     public api: ApiService,
     public helperService: HelperService,
-    public router: Router) { 
+    public router: Router,
+    public location: Location,
+    ) 
+    
+    { 
     activatedRoute.queryParams.subscribe({
       next:(resp)=> {
-        console.log(resp);
-        this.getDetail(resp['id'])
+        this.getDetail(resp['id']);
+        this.idPost = resp['id']
+        
       },
       error:(err)=>{
-//TODO devolver list-post 
+        this.router.navigateByUrl('post/list');
       }
     })
 
@@ -39,18 +45,22 @@ export class DetailPostComponent {
   getDetail(id: number): void{
     this.helperService.spinnerShow();
     this.api.getPr(apiRouters.POST_GET + `/${id}`).then((resp: any) =>{
-      console.log(resp)
       this.post = resp;
       this.helperService.spinnerHidder();
     }).catch(err=>{
       this.helperService.spinnerHidder();
-      console.error(err);
-      
+      this.helperService.alert('error', 'error', 'error')
     })
   }
 
   goBack(): void {
     this.router.navigateByUrl('post/list');
+    // this.location.back();
+    
   }
 
+  
+    
+
+  
 }
