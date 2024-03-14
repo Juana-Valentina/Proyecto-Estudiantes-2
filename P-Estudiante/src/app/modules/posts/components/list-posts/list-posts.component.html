@@ -2,7 +2,7 @@
 
 <div class="container">
     <div class="row">
-        @for (post of post; track $index) {
+        @for (post of posts; track $index) {
             <mat-card class="example-card">
                 <mat-card-header>
                     <mat-card-title>{{ post?.title | uppercase }}</mat-card-title>

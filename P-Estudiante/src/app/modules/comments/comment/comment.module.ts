@@ -17,7 +17,7 @@ import { NgxSpinner, NgxSpinnerComponent, NgxSpinnerModule } from 'ngx-spinner';
     CommentRoutingModule,
     MaterialModule,
     TranslateModule,
-    NgxSpinnerModule
+    NgxSpinnerModule,
   ],
 
   exports:[

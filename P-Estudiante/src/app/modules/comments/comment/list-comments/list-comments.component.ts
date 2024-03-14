@@ -2,6 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { HelperService } from '../../../../services/helper.service';
 import { ApiService } from '../../../../services/api.service';
 import { apiRouters } from '../../../../core/config/apiRouters';
+import { Comments } from '../../../../core/interfaces/comments';
 
 @Component({
   selector: 'app-list-comments',
@@ -10,9 +11,8 @@ import { apiRouters } from '../../../../core/config/apiRouters';
 })
 export class ListCommentsComponent implements OnInit {
 
-  @Input()
-  postId: any;
-  comments: any[] = [];
+  @Input() postId: any;
+  comments: Comments[] = [];
   
   constructor(public api: ApiService, public helperService: HelperService) { }
 
@@ -40,14 +40,3 @@ export class ListCommentsComponent implements OnInit {
   }
 
 }
-
-
-
-
-
-
-
-
-
-
-
