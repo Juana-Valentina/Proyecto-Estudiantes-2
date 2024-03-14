@@ -2,5 +2,14 @@
     "APP_NAME": "students",
     "CLOSE": "Close",
     "POST_LIST": "Post List",
-    "THERE_ARE_NO_DATA": "There are no Data"
+    "THERE_ARE_NO_DATA": "There are no Data",
+    "COMMENTS": "Comments",
+    "SEE_MORE": "See More",
+    "LOADING": "Loading",
+    "HIDE": "Hide",
+    "DETAILS_ID": "Details ID",
+    "TITLE": "Title",
+    "CONTENTS": "Content",
+    "NAME": "Name",
+    "EMAIL": "Email"
 }

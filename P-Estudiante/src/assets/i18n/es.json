@@ -2,5 +2,14 @@
     "APP_NAME": "estudiante",
     "CLOSE": "Cerrar",
     "POST_LIST": "Lista de Publicaciones",
-    "THERE_ARE_NO_DATA": "No hay Datos"
+    "THERE_ARE_NO_DATA": "No hay Datos",
+    "COMMENTS": "Comentarios",
+    "SEE_MORE": "Ver Más",
+    "LOADING": "Cargando",
+    "HIDE": "Ocultar",
+    "DETAILS_ID": "Detalles ID",
+    "TITLE": "Título",
+    "CONTENTS": "Contenido",
+    "NAME": "Nombre",
+    "EMAIL": "Correo"
 }

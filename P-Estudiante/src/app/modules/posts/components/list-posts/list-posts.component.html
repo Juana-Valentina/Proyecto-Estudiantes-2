@@ -11,7 +11,7 @@
                     <p>{{ post?.body | slice:0:60 }}...</p>
                 </mat-card-content>
                 <mat-card-actions>
-                    <button mat-button color="accent" (click)="detalles(post?.id)">Ver mas</button>
+                    <button mat-button color="accent" (click)="detalles(post?.id)"> {{ "SEE_MORE" | translate }} </button>
                 </mat-card-actions>
             </mat-card>
         }@empty {
@@ -21,5 +21,5 @@
 </div>
 
 <ngx-spinner bdColor="rgba(0, 0, 0, 0.8)" size="medium" color="#fff" type="square-jelly-box" [fullScreen]="true">
-    <p style="color: white">Loading...</p>
+    <p style="color: white"> {{ "LOADING" | translate }} ...</p>
 </ngx-spinner>

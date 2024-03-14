@@ -19,7 +19,6 @@ import { CommentModule } from '../comments/comment/comment.module';
     NgxSpinnerModule,
     MaterialModule,
     TranslateModule,
-    CommentModule
   ],
 
   exports:[

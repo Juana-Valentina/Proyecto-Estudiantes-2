@@ -1,15 +1,24 @@
 <div class="container">
-  <h1>Detalles ID {{post.id}} </h1>
-  <h2>Título: {{ post.title }}</h2>
-  <p>Contenido: {{ post.body }}...</p>
+  <h1> {{ "DETAILS_ID" | translate }} {{post.id}} </h1>
+  <h2> {{"TITLE" | translate }}: {{ post.title }}</h2>
+  <p> {{ "CONTENTS" | translate }} : {{ post.body }}</p>
 
-  <button mat-icon-button (click)="goBack()">
-      <mat-icon mat-button color="accent">arrow_back</mat-icon>
-  </button>
+  <div class="button-group">
+    <button mat-icon-button (click)="goBack()" aria-label="Go back">
+      <mat-icon color="accent">arrow_back</mat-icon>
+    </button>
+    <button mat-button color="accent" (click)="verComments()">{{showComments ? ('HIDE' | translate) : ('SEE_MORE' | translate)}}</button>
+  </div>
+  
+  
 
-  <div style="padding: 10px;"></div>
-
-  <app-list-comments></app-list-comments>
+  <div style="padding: 10px; width: 100%;">
+    @if (showComments){
+  <app-list-comments [postId]="idPost"></app-list-comments>
+    }
+  
 
 </div>
+</div>
+
 

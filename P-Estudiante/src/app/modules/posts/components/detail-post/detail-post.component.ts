@@ -7,11 +7,12 @@ import { CommonModule } from '@angular/common';
 import { HelperService } from '../../../../services/helper.service';
 import { MaterialModule } from '../../../material/material.module';
 import { CommentModule } from '../../../comments/comment/comment.module';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-detail-post',
   standalone: true,
-  imports: [CommonModule, MaterialModule, CommentModule],
+  imports: [CommonModule, MaterialModule, CommentModule, TranslateModule],
   templateUrl: './detail-post.component.html',
   styleUrl: './detail-post.component.scss'
 })
@@ -20,26 +21,26 @@ export class DetailPostComponent {
   // comments : Array<any> = []
     idPost: any;
   post = {} as any;
+  showComments = false;
 
   constructor(public activatedRoute: ActivatedRoute,
     public api: ApiService,
     public helperService: HelperService,
     public router: Router,
-    public location: Location,
     ) 
     
     { 
     activatedRoute.queryParams.subscribe({
       next:(resp)=> {
         this.getDetail(resp['id']);
-        this.idPost = resp['id']
+        this.idPost = resp['id'];
         
       },
       error:(err)=>{
         this.router.navigateByUrl('post/list');
       }
     })
-
+    
   }
 
   getDetail(id: number): void{
@@ -55,12 +56,11 @@ export class DetailPostComponent {
 
   goBack(): void {
     this.router.navigateByUrl('post/list');
-    // this.location.back();
     
   }
 
-  
-    
+  verComments(): void {
+    this.showComments = !this.showComments;
+  }
 
-  
 }

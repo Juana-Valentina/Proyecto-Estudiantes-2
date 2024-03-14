@@ -4,10 +4,7 @@ import { RouterOutlet } from '@angular/router';
 import {MaterialModule} from "./modules/material/material.module";
 import {TranslateModule, TranslateService} from "@ngx-translate/core";
 import {NgxSpinnerModule} from "ngx-spinner";
-import { HelperService } from './services/helper.service';
 import Swal from 'sweetalert2';
-import { ApiService } from './services/api.service';
-import { apiRouters } from './core/config/apiRouters';
 
 //otro proyecto
 

@@ -3,6 +3,9 @@ import { CommonModule } from '@angular/common';
 
 import { CommentRoutingModule } from './comment-routing.module';
 import { ListCommentsComponent } from './list-comments/list-comments.component';
+import { MaterialModule } from '../../material/material.module';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { NgxSpinner, NgxSpinnerComponent, NgxSpinnerModule } from 'ngx-spinner';
 
 
 @NgModule({
@@ -12,11 +15,14 @@ import { ListCommentsComponent } from './list-comments/list-comments.component';
   imports: [
     CommonModule,
     CommentRoutingModule,
-    ListCommentsComponent,
+    MaterialModule,
+    TranslateModule,
+    NgxSpinnerModule
   ],
 
   exports:[
     ListCommentsComponent,
+    
   ]
 
 })
