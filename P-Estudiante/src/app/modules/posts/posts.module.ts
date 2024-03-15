@@ -8,6 +8,11 @@ import { ListPostsComponent } from './components/list-posts/list-posts.component
 import { DetailPostComponent } from './components/detail-post/detail-post.component';
 import { TranslateModule } from '@ngx-translate/core';
 import { CommentModule } from '../comments/comment/comment.module';
+import { SpinnerComponent } from '../../components/spinner/spinner.component';
+import { ComponentsModule } from '../../components/components.module';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NavbarComponent } from '../../components/navbar/navbar.component';
 
 
 
@@ -19,12 +24,16 @@ import { CommentModule } from '../comments/comment/comment.module';
     NgxSpinnerModule,
     MaterialModule,
     TranslateModule,
+    CommentModule,
+    ComponentsModule,
+    MatProgressSpinnerModule,
+    
   ],
-
   exports:[
     CommonModule,
     NgxSpinnerModule,
     MaterialModule,
+    
   ]
 
 })

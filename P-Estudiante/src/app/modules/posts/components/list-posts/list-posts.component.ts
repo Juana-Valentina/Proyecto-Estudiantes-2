@@ -3,7 +3,7 @@ import { apiRouters } from '../../../../core/config/apiRouters';
 import { ApiService } from '../../../../services/api.service';
 import { Router } from '@angular/router';
 import { HelperService } from '../../../../services/helper.service';
-import { Post } from '../../../../core/interfaces/post';
+import { Post } from '../../../../shared/interfaces/post'; 
 
 
 @Component({

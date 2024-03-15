@@ -32,6 +32,11 @@ initApp():void{
       // this.helperService.alert(this.translateService.instant('CLOSE'), "CLOSE", "success")    
 }
 
+// changeLanguage(lang: string): void {
+//   this.translateService.use(lang);
+//   localStorage.setItem('lang', lang);
+// }
+
 } //FINAL
 
 

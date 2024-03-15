@@ -8,13 +8,14 @@ import { HelperService } from '../../../../services/helper.service';
 import { MaterialModule } from '../../../material/material.module';
 import { CommentModule } from '../../../comments/comment/comment.module';
 import { TranslateModule } from '@ngx-translate/core';
+import { ComponentsModule } from "../../../../components/components.module";
 
 @Component({
-  selector: 'app-detail-post',
-  standalone: true,
-  imports: [CommonModule, MaterialModule, CommentModule, TranslateModule],
-  templateUrl: './detail-post.component.html',
-  styleUrl: './detail-post.component.scss'
+    selector: 'app-detail-post',
+    standalone: true,
+    templateUrl: './detail-post.component.html',
+    styleUrl: './detail-post.component.scss',
+    imports: [CommonModule, MaterialModule, CommentModule, TranslateModule, ComponentsModule]
 })
 export class DetailPostComponent {
 
@@ -22,6 +23,7 @@ export class DetailPostComponent {
     idPost: any;
   post = {} as any;
   showComments = false;
+  ruta = 'post/list';
 
   constructor(public activatedRoute: ActivatedRoute,
     public api: ApiService,
@@ -52,11 +54,6 @@ export class DetailPostComponent {
       this.helperService.spinnerHidder();
       this.helperService.alert('error', 'error', 'error')
     })
-  }
-
-  goBack(): void {
-    this.router.navigateByUrl('post/list');
-    
   }
 
   verComments(): void {

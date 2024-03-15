@@ -1,0 +1,25 @@
+.welcome-section {
+    height: 300px; /* Ajusta la altura según tu diseño */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .welcome-text {
+    font-size: 48px; /* Tamaño de fuente grande para más impacto */
+    color: #FF4081; /* Color accent vibrante para el texto */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Sombra suave para mejorar la legibilidad */
+    animation: fadeInUp 1.5s ease; /* Animación suave para la entrada del texto */
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  

@@ -2,7 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { HelperService } from '../../../../services/helper.service';
 import { ApiService } from '../../../../services/api.service';
 import { apiRouters } from '../../../../core/config/apiRouters';
-import { Comments } from '../../../../core/interfaces/comments';
+import { Comments } from '../../../../shared/interfaces/comments'; 
 
 @Component({
   selector: 'app-list-comments',
@@ -28,6 +28,7 @@ export class ListCommentsComponent implements OnInit {
       next: (resp: any) => {
         if (this.postId) {
           this.comments = resp;
+          this.helperService.spinnerHidder()
         }
       },
       error: (err) => {
