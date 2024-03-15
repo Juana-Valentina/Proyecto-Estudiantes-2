@@ -21,7 +21,8 @@
         <li class="nav-item">
           <a class="nav-link" href="#">Users</a>
         </li>
-        <select class="form-select" [(ngModel)]="selectedLanguage" (ngModelChange)="changeLanguage($event)">
+        <select class="form-select" [ngModel]="selectedLanguage" (ngModelChange)="changeLanguage($event)">>
+          <option disabled>Seleccionar</option>
           <option value="en">English</option>
           <option value="es">Español</option>
         </select>

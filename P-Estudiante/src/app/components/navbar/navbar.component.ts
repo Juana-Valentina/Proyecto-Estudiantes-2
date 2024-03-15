@@ -8,17 +8,14 @@ import { TranslateService } from '@ngx-translate/core';
   styleUrl: './navbar.component.scss'
 })
 export class NavbarComponent {
-  selectedLanguage: string; // Propiedad para almacenar el idioma seleccionado
 
-  constructor(public translateService: TranslateService) {
-    // Inicializar el idioma seleccionado con el idioma actual
-    this.selectedLanguage = localStorage.getItem('lang') || 'en';
-    this.translateService.setDefaultLang(this.selectedLanguage);
-    this.translateService.use(this.selectedLanguage);
-  }
+  selectedLanguage: string = 'en'; // Valor predeterminado
+
+  constructor(public translateService: TranslateService) { }
 
   changeLanguage(lang: string): void {
-    this.translateService.use(lang);
-    localStorage.setItem('lang', lang);
+    this.selectedLanguage = lang;
+    this.translateService.use(lang); // Cambiar el idioma usando TranslateService
+    localStorage.setItem('lang', lang); // Opcional: guardar el idioma seleccionado en localStorage
   }
 }
