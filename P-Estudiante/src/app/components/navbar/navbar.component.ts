@@ -9,13 +9,11 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class NavbarComponent {
 
-  selectedLanguage: string = 'en'; // Valor predeterminado
+  selectedLanguage: string = 'en'; // Valor predeterminado (como prueba)
 
   constructor(public translateService: TranslateService) { }
 
-  changeLanguage(lang: string): void {
-    this.selectedLanguage = lang;
-    this.translateService.use(lang); // Cambiar el idioma usando TranslateService
-    localStorage.setItem('lang', lang); // Opcional: guardar el idioma seleccionado en localStorage
+  changeLanguage(lang: string) {
+    this.translateService.use(lang);
   }
 }

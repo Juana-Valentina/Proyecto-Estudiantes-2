@@ -19,7 +19,7 @@ import { ComponentsModule } from "../../../../components/components.module";
 })
 export class DetailPostComponent {
 
-  // comments : Array<any> = []
+  // public posts: Post[] = [];
     idPost: any;
   post = {} as any;
   showComments = false;

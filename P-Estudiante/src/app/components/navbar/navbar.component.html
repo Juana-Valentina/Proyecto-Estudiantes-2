@@ -1,41 +1,27 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link" [routerLink]="['/post/list']">Post</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Albums</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Photos</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Todos</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Users</a>
-        </li>
-        <select class="form-select" [ngModel]="selectedLanguage" (ngModelChange)="changeLanguage($event)">>
-          <option disabled>Seleccionar</option>
-          <option value="en">English</option>
-          <option value="es">Español</option>
-        </select>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-        </li>
-      </ul>
-      
-      <form class="d-flex">
-        
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
-    </div>
-  </div>
-</nav>
+<mat-toolbar color="white">
+  <span>Navbar</span>
+  <button mat-button routerLink="/post/list" color="accent">
+    <mat-icon>description</mat-icon>
+    Post
+  </button>
+  <button mat-button routerLink="./Albums" color="accent">
+    <mat-icon>album</mat-icon>
+    Albums
+  </button>
+  <button mat-button routerLink="#" color="accent">
+    <mat-icon>photo</mat-icon>
+    Photos
+  </button>
+  <app-back></app-back>
+  <button mat-button routerLink="#" color="accent">
+    <mat-icon>person</mat-icon>
+    User
+  </button>
+  <mat-menu #idiomaMenu="matMenu">
+    <button mat-menu-item (click)="changeLanguage('es')">Español</button>
+  <button mat-menu-item (click)="changeLanguage('en')">Inglés</button>
+  </mat-menu>
+  <button mat-icon-button [matMenuTriggerFor]="idiomaMenu" color="accent">
+    <mat-icon>language</mat-icon>
+  </button>
+</mat-toolbar>

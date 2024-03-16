@@ -12,7 +12,7 @@ import { Comments } from '../../../../shared/interfaces/comments';
 export class ListCommentsComponent implements OnInit {
 
   @Input() postId: any;
-  comments: Comments[] = [];
+  public comments: Comments[] = [];
   
   constructor(public api: ApiService, public helperService: HelperService) { }
 

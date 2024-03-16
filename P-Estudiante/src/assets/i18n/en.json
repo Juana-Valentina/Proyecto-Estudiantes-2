@@ -11,5 +11,7 @@
     "TITLE": "Title",
     "CONTENTS": "Content",
     "NAME": "Name",
-    "EMAIL": "Email"
+    "EMAIL": "Email",
+    "WELCOME": "Welcome!",
+    "ALBUMS": "Albums"
 }

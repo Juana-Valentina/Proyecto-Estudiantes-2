@@ -1,0 +1,17 @@
+<app-navbar></app-navbar>
+
+<h1>albunes</h1>
+
+<div class="container">
+
+    @for (album of albums; track $index) {
+        <h1> userId {{ album ?.userId }} </h1>
+        <h2> {{album ?.id}} </h2>
+        <p> {{album ?.title}} </p>
+    }@empty {
+        <p>no hay datos</p>
+    }
+
+</div>
+
+<app-spinner></app-spinner>
