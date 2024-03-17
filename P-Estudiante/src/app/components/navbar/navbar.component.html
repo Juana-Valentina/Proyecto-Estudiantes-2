@@ -4,19 +4,12 @@
     <mat-icon>description</mat-icon>
     Post
   </button>
-  <button mat-button routerLink="./Albums" color="accent">
+  <button mat-button routerLink="/post/list-albums" color="accent">
     <mat-icon>album</mat-icon>
     Albums
   </button>
-  <button mat-button routerLink="#" color="accent">
-    <mat-icon>photo</mat-icon>
-    Photos
-  </button>
-  <app-back></app-back>
-  <button mat-button routerLink="#" color="accent">
-    <mat-icon>person</mat-icon>
-    User
-  </button>
+  <app-back ></app-back>
+  
   <mat-menu #idiomaMenu="matMenu">
     <button mat-menu-item (click)="changeLanguage('es')">Español</button>
   <button mat-menu-item (click)="changeLanguage('en')">Inglés</button>

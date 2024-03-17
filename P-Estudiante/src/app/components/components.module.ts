@@ -5,12 +5,11 @@ import { SpinnerComponent } from './spinner/spinner.component';
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { MaterialModule } from '../modules/material/material.module';
 import { TranslateModule } from '@ngx-translate/core';
-import { MatProgressSpinner, MatProgressSpinnerModule } from '@angular/material/progress-spinner';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { BackComponent } from './back/back.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { RouterLink } from '@angular/router';
-import { FormsModule, NgModel } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -20,6 +19,7 @@ import { FormsModule, NgModel } from '@angular/forms';
     SpinnerComponent,
     BackComponent,
     HomePageComponent,
+    
   ],
 
   imports: [
@@ -35,7 +35,8 @@ import { FormsModule, NgModel } from '@angular/forms';
   ],
 
   exports: [
-    SpinnerComponent, NavbarComponent, BackComponent, HomePageComponent
+    SpinnerComponent, NavbarComponent, 
+    BackComponent, HomePageComponent
     
   ]
 

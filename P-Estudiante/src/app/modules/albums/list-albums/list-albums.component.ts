@@ -1,42 +1,47 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { Album } from '../../../shared/interfaces/album';
+import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
+import { apiRouters } from '../../../core/config/apiRouters';
 import { ApiService } from '../../../services/api.service';
 import { HelperService } from '../../../services/helper.service';
-import { apiRouters } from '../../../core/config/apiRouters';
-import { ActivatedRoute } from '@angular/router';
+import { Album } from '../../../shared/interfaces/album';
 
 @Component({
   selector: 'app-list-albums',
   templateUrl: './list-albums.component.html',
   styleUrl: './list-albums.component.scss'
 })
-
 export class ListAlbumsComponent implements OnInit {
-  @Input() userId: any;
-  public albums: Album[] = [];
 
-  constructor(public activatedRoute: ActivatedRoute
-    ,public api: ApiService, public helperService: HelperService){}
+  ruta = 'home-page';
+ 
+  public albums: Album[] = []; 
+
+  constructor(public api: ApiService, 
+    public router: Router, 
+    public helperService: HelperService,
+    public activatedRoute: ActivatedRoute){}
 
   ngOnInit(): void {
-      console.log(this.getalbums);
-      
+    this.getAlbums(); 
   }
 
-  getalbums(): void{
+  getAlbums(): void { 
     this.helperService.spinnerShow();
-    this.api.getOb(apiRouters.POST_GET).subscribe({
+    this.api.getOb(apiRouters.POST_GET).subscribe({ 
       next: (resp) => {
         console.table(resp);
-        this.albums = resp
-        this.helperService.spinnerHidder()
+        this.albums = resp; 
+        this.helperService.spinnerHidder();
       }, error: (err) => {
-        this.helperService.spinnerHidder()
-        this.helperService.alert('error', 'error', 'error')
-        console.error(err);
-        
+        this.helperService.spinnerHidder();
+        this.helperService.alert('error', 'error', 'error');
+        console.error(err);  
       }
-    })
+    });
+  }
+  
+  info(id: number): void {
+    this.router.navigateByUrl(`post/detail?id=${id}`);
   }
 
 }

@@ -13,20 +13,23 @@ import { ComponentsModule } from '../../components/components.module';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavbarComponent } from '../../components/navbar/navbar.component';
+import { AlbumsModule } from '../albums/albums.module';
 
 
 
 @NgModule({
   declarations: [ ListPostsComponent ],
   imports: [
+    
     CommonModule,
+    
     PostsRoutingModule,
     NgxSpinnerModule,
     MaterialModule,
     TranslateModule,
     CommentModule,
     ComponentsModule,
-    MatProgressSpinnerModule,
+    MatProgressSpinnerModule
     
   ],
   exports:[

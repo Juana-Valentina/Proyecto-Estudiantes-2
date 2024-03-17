@@ -1,32 +1,30 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ListAlbumsComponent } from './list-albums/list-albums.component';
-import { NgxSpinnerModule } from 'ngx-spinner';
 import { MaterialModule } from '../material/material.module';
 import { TranslateModule } from '@ngx-translate/core';
+import { NgxSpinnerModule } from 'ngx-spinner';
 import { ComponentsModule } from '../../components/components.module';
-import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { AppComponent } from '../../app.component';
+
 
 
 @NgModule({
   declarations: [
     ListAlbumsComponent
   ],
-  
+
   imports: [
     CommonModule,
-    NgxSpinnerModule,
     MaterialModule,
     TranslateModule,
+    NgxSpinnerModule,
     ComponentsModule,
-    MatProgressSpinnerModule
+    AppComponent
   ],
 
-  exports: [
-    ListAlbumsComponent,
-    MaterialModule,
-    NgxSpinnerModule
-  ],
+  exports:[
+    ListAlbumsComponent
+  ]
 })
-
 export class AlbumsModule { }
