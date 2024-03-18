@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
+import { HelperService } from '../../services/helper.service';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -11,9 +13,18 @@ export class NavbarComponent {
 
   selectedLanguage: string = 'en'; // Valor predeterminado (como prueba)
 
-  constructor(public translateService: TranslateService) { }
+  constructor(public translateService: TranslateService,
+    public helperService: HelperService,
+    public router: Router ) { }
+
+    go(): void{
+      this.router.navigateByUrl('/post/list')
+    }
 
   changeLanguage(lang: string) {
     this.translateService.use(lang);
+    this.helperService.setLocalSorage('lang', lang);
+    this.selectedLanguage = lang; 
+
   }
 }
