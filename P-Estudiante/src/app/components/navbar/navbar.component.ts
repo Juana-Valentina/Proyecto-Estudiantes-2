@@ -27,4 +27,7 @@ export class NavbarComponent {
     this.selectedLanguage = lang; 
 
   }
+
+
+
 }

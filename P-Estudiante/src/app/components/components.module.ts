@@ -10,6 +10,7 @@ import { BackComponent } from './back/back.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { RouterLink } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import { MObligatorioComponent } from './m-obligatorio/m-obligatorio.component';
 
 
 
@@ -19,6 +20,7 @@ import { FormsModule } from '@angular/forms';
     SpinnerComponent,
     BackComponent,
     HomePageComponent,
+    MObligatorioComponent,
     
   ],
 
@@ -36,7 +38,8 @@ import { FormsModule } from '@angular/forms';
 
   exports: [
     SpinnerComponent, NavbarComponent, 
-    BackComponent, HomePageComponent
+    BackComponent, HomePageComponent, 
+    MObligatorioComponent
     
   ]
 

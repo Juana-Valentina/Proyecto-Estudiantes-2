@@ -14,5 +14,10 @@
     "EMAIL": "Email",
     "WELCOME": "Welcome!",
     "ALBUMS": "Albums",
-    "PHOTO": "Photos"
+    "E-MAIL": "E-mail",
+    "PASSWORD": "Password",
+    "SEND": "Send",
+    "LOGIN": "Login",
+    "THE_EMAIL_IS REQUIRED": "Email is required",
+    "THE_PASSWORD_IS_REQUIRED": "Password is required"
 }

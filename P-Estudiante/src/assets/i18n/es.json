@@ -14,5 +14,10 @@
     "EMAIL": "Correo",
     "WELCOME": "¡Bienvenidos!",
     "ALBUMS": "Álbumes",
-    "PHOTO": "Fotos"
+    "E-MAIL": "Correo",
+    "PASSWORD": "Contraseña",
+    "SEND": "Enviar",
+    "LOGIN": "Ingresar",
+    "THE_EMAIL_IS REQUIRED": "El correo es requerido",
+    "THE_PASSWORD_IS_REQUIRED": "La contraseña es requerida"
 }

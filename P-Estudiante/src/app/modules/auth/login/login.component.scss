@@ -1,0 +1,37 @@
+.container {
+    display: grid;
+    place-items: center;
+    height: 90vh;
+  }
+  
+  .form-grid {
+    display: flex; /* Cambiado a flex */
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+    max-width: 400px; /* Ajusta esto según tus necesidades */
+    padding: 20px;
+    border-radius: 20px;
+    background-color: #f0f0f085; /* Solo para resaltar el contenedor */
+  }
+  
+  .form-title {
+    text-align: center;
+    font-weight: bold; /* Negrita */
+    font-size: 25px; /* Ajusta el tamaño según tus preferencias */
+  }
+
+  h3 span{
+    text-align: center;
+
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }
+  
+  .submit-btn {
+    width: 100%; /* Hace que el botón se expanda para llenar el espacio */
+  }
+  
