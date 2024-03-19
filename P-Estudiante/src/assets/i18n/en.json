@@ -18,6 +18,8 @@
     "PASSWORD": "Password",
     "SEND": "Send",
     "LOGIN": "Login",
-    "THE_EMAIL_IS REQUIRED": "Email is required",
-    "THE_PASSWORD_IS_REQUIRED": "Password is required"
+    "THE_EMAIL_IS_REQUIRED": "Email is required",
+    "THE_PASSWORD_IS_REQUIRED": "Password is required",
+    "ENTER_YOUR_EMAIL": "Enter your email address",
+    "ENTER_YOUR_PASSWORD": "Enter your password"
 }

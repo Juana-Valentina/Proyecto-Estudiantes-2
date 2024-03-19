@@ -12,6 +12,7 @@ export class HomePageComponent implements OnInit {
   constructor(public helperService: HelperService) {}
 
   ngOnInit(): void {
-    this.userEmail = this.helperService.getLocalSorage('user') ? JSON.parse(this.helperService.getLocalSorage('user') || '{}').email : null;
+    this.userEmail = this.helperService.getLocalSorage('user') ? 
+    JSON.parse(this.helperService.getLocalSorage('user') || '{}').email : null;
   }
 }

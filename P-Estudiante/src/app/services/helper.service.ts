@@ -29,7 +29,7 @@ export class HelperService {
       icon: icon,
       confirmButtonText: this.translateService.instant("CLOSE"), 
       customClass: {
-        confirmButton: 'btn btn-primary'
+        confirmButton: 'btn btn-outline-primary'
       }
     });
   }
@@ -54,11 +54,11 @@ getLocalSorage(item: any): string | undefined{
   }
 }
 
-setLocalSorage(key: string, value: string): void{
+setLocalStorage(key: string, value: string): void{
   localStorage.setItem(key, value);
 }
 
-deleteLocalSorage(item: string): void{
+deleteLocalStorage(item: string): void{
   localStorage.removeItem(item);
 }
 

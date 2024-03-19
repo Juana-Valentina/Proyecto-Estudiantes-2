@@ -7,7 +7,9 @@ import { Router } from '@angular/router';
   styleUrl: './back.component.scss'
 })
 export class BackComponent {
+
   @Input() rute = '';
+  @Input() icon = 'arrow_back';
 
   constructor(public router: Router,
     ) {}

@@ -9,8 +9,8 @@ export const routes: Routes = [
     { path: 'post', loadChildren: () => import('./modules/posts/posts.module').then((m) => m.PostsModule), canActivate: [guardsGuard]},
     { path: 'auth', loadChildren: () => import('./modules/auth/auth.module').then((m) => m.AuthModule), canActivate: [guardsGuard]},
     // Redirigir a login si no está autenticado, o a home si ya está autenticado
-    // { path: '', redirectTo: 'login', pathMatch: 'full' },
+    { path: '', redirectTo: 'login', pathMatch: 'full' },
     // // Ruta para manejar rutas no definidas, redirige al login
-    // { path: '**', redirectTo: 'login' },
+    { path: '**', redirectTo: 'login' },
 ];
     

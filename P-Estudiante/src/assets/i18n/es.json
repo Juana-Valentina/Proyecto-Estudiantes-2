@@ -18,6 +18,8 @@
     "PASSWORD": "Contraseña",
     "SEND": "Enviar",
     "LOGIN": "Ingresar",
-    "THE_EMAIL_IS REQUIRED": "El correo es requerido",
-    "THE_PASSWORD_IS_REQUIRED": "La contraseña es requerida"
+    "THE_EMAIL_IS_REQUIRED": "El correo es requerido",
+    "THE_PASSWORD_IS_REQUIRED": "La contraseña es requerida",
+    "ENTER_YOUR_EMAIL": "Ingrese su correo electrónico",
+    "ENTER_YOUR_PASSWORD": "Ingrese su contraseña"
 }

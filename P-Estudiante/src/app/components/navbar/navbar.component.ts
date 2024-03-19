@@ -23,7 +23,7 @@ export class NavbarComponent {
 
   changeLanguage(lang: string) {
     this.translateService.use(lang);
-    this.helperService.setLocalSorage('lang', lang);
+    this.helperService.setLocalStorage('lang', lang);
     this.selectedLanguage = lang; 
 
   }

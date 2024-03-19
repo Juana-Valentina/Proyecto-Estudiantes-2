@@ -1,13 +1,19 @@
-import { CanActivateFn } from '@angular/router';
+import { inject } from '@angular/core';
+import { CanActivateFn, Router } from '@angular/router';
+import { HelperService } from '../../services/helper.service';
 
 export const guardsGuard: CanActivateFn = (route, state) => {
+ const helperService = inject (HelperService); 
+ const router = inject (Router);
+ 
 
-
-  if (localStorage.getItem('session')){
+  if (helperService.getLocalSorage('session')){
     return true;
 
   } else {
-    return false;
+    const url = router.createUrlTree (["/auth/log-in"]) 
+    return url;
+
   }
   
 };
