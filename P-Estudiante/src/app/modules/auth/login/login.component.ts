@@ -41,7 +41,4 @@ export class LoginComponent {
     this.helperService.spinnerHidder()
   }
 
-
-
-
 }

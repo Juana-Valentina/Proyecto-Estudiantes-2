@@ -1,3 +1,8 @@
-<span *ngFor="let error of errorKeys()" class="text-danger">
-    {{ errorMessages[error] | translate }}
-  </span>
+<div class="container">
+  <mat-error *ngIf="control.invalid && control.touched" class="text-danger">
+  {{ message | translate }}
+  </mat-error>
+</div>
+
+
+

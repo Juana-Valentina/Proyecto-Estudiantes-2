@@ -11,6 +11,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { AppComponent } from '../../app.component';
 import { FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
+import { MObligatorioComponent } from '../../components/m-obligatorio/m-obligatorio.component';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { BrowserModule } from '@angular/platform-browser';
     ComponentsModule,
     MatProgressSpinnerModule,
     AppComponent,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    
   ],
   
 })
