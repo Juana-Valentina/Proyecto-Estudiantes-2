@@ -1,5 +1,8 @@
 {
   "dependencies": {
     "ngx-spinner": "^16.0.2"
+  },
+  "devDependencies": {
+    "@angular/cli": "^17.3.1"
   }
 }

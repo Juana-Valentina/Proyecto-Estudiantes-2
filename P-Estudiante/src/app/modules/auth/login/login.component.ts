@@ -31,6 +31,7 @@ export class LoginComponent{
 
   save(): void{
 
+    // TODO hacer algo similar al regster, se compara el correo y la contraseña si son validos ingresara 
   //   this.api.getObs(apiRouters.USERS, true).subscribe({
   //     let Usern = null;
   //     for (let user of users) {
