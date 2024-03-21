@@ -24,7 +24,7 @@ export class ListCommentsComponent implements OnInit {
   getComments(): void {
     this.helperService.spinnerShow();
     //llama HTTP GET usando el servicio ApiService para obtener los comentarios del post específico.
-    this.api.getOb(`${apiRouters.POST_GET}/${this.postId}/comments`).subscribe({
+    this.api.getOb(`${apiRouters.POST_GET}/${this.postId}${apiRouters.COMMENTS}`).subscribe({
       next: (resp: any) => {
         if (this.postId) {
           this.comments = resp;

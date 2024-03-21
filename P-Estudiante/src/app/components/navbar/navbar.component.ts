@@ -26,8 +26,8 @@ export class NavbarComponent {
     this.helperService.setLocalStorage('lang', lang);
     this.selectedLanguage = lang; 
 
-  }
-
-
-
+  
 }
+
+
+};

@@ -1,9 +1,9 @@
-import { Component, OnInit } from '@angular/core';
-import { apiRouters } from '../../../../core/config/apiRouters';
-import { ApiService } from '../../../../services/api.service';
-import { Router } from '@angular/router';
-import { HelperService } from '../../../../services/helper.service';
-import { Post } from '../../../../shared/interfaces/post'; 
+import { Component, OnInit } from "@angular/core";
+import { Router } from "@angular/router";
+import { apiRouters } from "../../../../core/config/apiRouters";
+import { ApiService } from "../../../../services/api.service";
+import { HelperService } from "../../../../services/helper.service";
+import { Post } from "../../../../shared/interfaces/post";
 
 
 @Component({
@@ -23,8 +23,6 @@ export class ListPostsComponent implements OnInit {
     this.getpost();
   }
 
-
-
   getpost(): void{
     this.helperService.spinnerShow();
     this.api.getOb(apiRouters.POST_GET).subscribe({
@@ -34,7 +32,7 @@ export class ListPostsComponent implements OnInit {
         this.helperService.spinnerHidder()
       }, error: (err) => {
         this.helperService.spinnerHidder()
-        this.helperService.alert('error', 'error', 'error')
+        this.helperService.alert('ERROR', 'Hubo un error', 'error');
         console.error(err);
         
       }
@@ -42,6 +40,6 @@ export class ListPostsComponent implements OnInit {
   }
 
   detalles(id: number): void {
-    this.router.navigateByUrl(`post/detail?id=${id}`);
+    this.router.navigate(['post/detail'], { queryParams: { id } });
   }
 }

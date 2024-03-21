@@ -18,6 +18,7 @@ import Swal from 'sweetalert2';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
+  title = 'P-Estudiante';
   
   constructor(private translateService: TranslateService,
     // public helperService: HelperService,
