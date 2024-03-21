@@ -12,11 +12,14 @@ import { AppComponent } from '../../app.component';
 import { FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { MObligatorioComponent } from '../../components/m-obligatorio/m-obligatorio.component';
+import { RegisterComponent } from './register/register.component';
+import { Expresionesr } from '../../core/config/expresiones-r';
 
 
 @NgModule({
   declarations: [
-    LoginComponent
+    LoginComponent,
+    RegisterComponent
   ],
 
   imports: [
@@ -29,7 +32,6 @@ import { MObligatorioComponent } from '../../components/m-obligatorio/m-obligato
     MatProgressSpinnerModule,
     AppComponent,
     ReactiveFormsModule,
-    
   ],
   
 })

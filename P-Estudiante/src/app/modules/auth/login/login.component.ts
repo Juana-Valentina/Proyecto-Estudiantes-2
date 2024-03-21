@@ -2,6 +2,8 @@ import { Component, Input, OnInit, input } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { HelperService } from '../../../services/helper.service';
 import { Router } from '@angular/router';
+import { ApiService } from '../../../services/api.service';
+import { apiRouters } from '../../../core/config/apiRouters';
 
 @Component({
   selector: 'app-login',
@@ -18,7 +20,8 @@ export class LoginComponent{
   
   constructor( 
     public helperService: HelperService,
-    public router: Router
+    public router: Router,
+    public api: ApiService
   ){}
 
   form = new FormGroup({
@@ -28,7 +31,16 @@ export class LoginComponent{
 
   save(): void{
 
-    if (this.form.value.email === 'juanasena-2005@outlook.com' && (this.form.value.password === '3996')){
+  //   this.api.getObs(apiRouters.USERS, true).subscribe({
+  //     let Usern = null;
+  //     for (let user of users) {
+  //       if (user.email === this.form.value.email && user.password === this.form.value.password) {
+  //         Usern = user;
+  // });
+
+
+     if (this.form.value.email === 'juanasena-2005@outlook.com' && (this.form.value.password === '3996')){
+      // if (user.name ===  && ){
 
       const data ={
         email: 'juanasena-2005@outlook.com',

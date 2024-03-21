@@ -17,7 +17,10 @@
     <mat-icon>account_circle</mat-icon>
     Login
   </button>
-
+  <button mat-button routerLink="/auth/register-u" color="accent">
+    <mat-icon>person_add</mat-icon>
+    Register
+  </button>
   <mat-menu #idiomaMenu="matMenu">
     <button mat-menu-item (click)="changeLanguage('es')">Español</button>
   <button mat-menu-item (click)="changeLanguage('en')">Inglés</button>
